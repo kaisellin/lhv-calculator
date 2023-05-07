@@ -74,8 +74,9 @@ class LoanCalculatorTests {
 	@Test
 	void changeYears() {
 		openCalculator();
+		$("select[name=\"years\"]").shouldHave(Condition.value("72"));
 		$("select[name=\"years\"]").click();
-		$("select[name=\"years\"]").setValue("12");
+		$("option[value=\"60\"]").click();
 		sleep(2000);
 	}
 
